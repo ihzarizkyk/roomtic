@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 	<title>Roomtic</title>
 </head>
 <body>
@@ -20,7 +21,13 @@
           <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item">
+          @auth
+          <a class="nav-link" href="/dashboard">Dashboard</a>
+          @endauth
+
+          @guest
           <a class="nav-link" href="/login">Login</a>
+          @endguest
         </li>
       </ul>
     </div>
