@@ -15,3 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get("/","HomeController@index")->name("home");
 Route::get("/login","Auth\LoginController@index");
+
+// Dashboard Routes
+
+Route::get("/dashboard","Dashboard\MainController@index")->name("dashboard");
