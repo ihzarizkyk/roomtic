@@ -19,32 +19,69 @@
 <div class="row d-flex justify-content-center">
 	<div class="col-md-6">
 		<div class="card p-5 mb-4 mt-4 bg-light rounded-3">
+			<div class="card-header">
+				RoomTic
+			</div>
 			<div class="card-body">
 
 				<h1 class="fs-1 fw-bold my-3">
-					Register - RoomTic
+					Register
 				</h1>
 
-				<form action="#" method="POST">
-
+				<form action="/postregister" method="POST">
+					@csrf
 					<div class="form-floating mb-3">
-						<input type="number" class="form-control" id="floatingInput" name="numberID">
+						<input type="number" class="form-control" id="floatingInput" maxlength="10" name="identity" required>
 						<label for="floatingInput"><i class="bi bi-person-vcard-fill"></i> NIP / NIM</label>
 					</div>
 
+					@error('identity')
+					<p class="text-danger">
+						{{ $message }}
+					</p>
+					@enderror
+
 					<div class="form-floating mb-3">
-						<input type="email" class="form-control" id="floatingInput" name="email">
-						<label for="floatingInput"><i class="bi bi-person"></i> Email</label>
+						<input type="text" class="form-control" id="floatingInput" name="name" required>
+						<label for="floatingInput"><i class="bi bi-person"></i> Your Name </label>
 					</div>
 
+					@error('name')
+					<p class="text-danger">
+						{{ $message }}
+					</p>
+					@enderror
+
+					<div class="form-floating mb-3">
+						<input type="email" class="form-control" id="floatingInput" name="email" required>
+						<label for="floatingInput"><i class="bi bi-mailbox2"></i> Email </label>
+					</div>
+
+					@error('email')
+					<p class="text-danger">
+						{{ $message }}
+					</p>
+					@enderror
+
 					<div class="form-floating">
-						<input type="password" class="form-control" id="floatingPassword" name="password">
-						<label for="floatingPassword"><i class="bi bi-pass-fill"></i> Password</label>
+						<input type="password" class="form-control" id="floatingPassword" name="password" required>
+						<label for="floatingPassword"><i class="bi bi-pass-fill"></i> Password </label>
+					</div>
+
+					@error('password')
+					<p class="text-danger">
+						{{ $message }}
+					</p>
+					@enderror
+
+					<div class="form-group mt-2">
+						<input type="checkbox" class="form-check-input" onclick="Toggle()">
+						<label for="check">Show \ Hide Password</label>
 					</div>
 
 					<div class="form-group mt-2">
 						<p class="text-secondary">
-							You Already have Account? please login <a href="/login">here</a>
+							You Already have Account? please login <a class="text-decoration-none" href="/login">here</a>
 						</p>
 					</div>
 
@@ -74,5 +111,15 @@
 </div>
 
 <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+<script>
+	function Toggle(){
+		var temp = document.getElementById('floatingPassword');
+		if(temp.type == "password"){
+			temp.type = "text";
+		}else{
+			temp.type = "password";
+		}
+	}
+</script>
 </body>
 </html>

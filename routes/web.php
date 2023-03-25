@@ -20,3 +20,10 @@ Route::get("/register","Auth\RegisterController@index");
 // Dashboard Routes
 
 Route::get("/dashboard","Dashboard\MainController@index")->name("dashboard");
+
+// Auth Routes
+
+Route::post("/postregister","Auth\RegisterController@postRegister");
+Route::post("/postlogin","Auth\LoginController@postLogin");
+
+Route::post("/logout","Auth\LoginController@logout");
