@@ -28,10 +28,10 @@
 					Register
 				</h1>
 
-				<form action="/postregister" method="POST">
+				<form class="form" action="/storeRegister" method="POST">
 					@csrf
 					<div class="form-floating mb-3">
-						<input type="number" class="form-control" id="floatingInput" maxlength="10" name="identity" required>
+						<input type="number" class="form-control" id="floatingInput" name="identity" required>
 						<label for="floatingInput"><i class="bi bi-person-vcard-fill"></i> NIP / NIM</label>
 					</div>
 

@@ -17,33 +17,32 @@ class RegisterController extends Controller
         return view("auth.register");
     }
 
-    public function postRegister(Request $req)
+    public function storeRegister(Request $req)
     {
 
         $credentials = $req->validate([
-            "name" => 'required',
-            "identity" => 'required|digits:10|numeric',
-            "email" => 'required|email',
-            "password" => 'required'
+            "name" => "required",
+            "identity" => "required|numeric",
+            "email" => "required|email",
+            "password" => "required"
         ]);
 
-        if(!Auth::check($credentials))
+        if(Auth::check($credentials))
         {
-            return redirect()->back();
-        }else{
-
-            DB::table("users")->insert([
-                'name' => $req->name(),
-                'identity' => $req->identity(),
-                'email' => $req->email(),
-                'roles' => "student",
-                'password' => Hash::make($req->password())
-            ]);
+            $user = new User;
+            $user->name = $req->name();
+            $user->identity = $req->identity();
+            $user->email = $req->email();
+            $user->roles = "student";
+            $user->password = Hash::make($req->password());
+            $user->save();
 
             $req->session()->regenerate();
 
             return redirect("/dashboard");
-        };
+
+        }
+            return redirect()->back();
 
     }
 }
