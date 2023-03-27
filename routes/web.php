@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get("/","HomeController@index")->name("home");
-Route::get("/login","Auth\LoginController@index");
+Route::get("/login","Auth\LoginController@index")->name("login");
 Route::get("/register","Auth\RegisterController@index");
 
 // Dashboard Routes
@@ -26,4 +26,4 @@ Route::get("/dashboard","Dashboard\MainController@index")->name("dashboard");
 Route::post("/storeRegister","Auth\RegisterController@storeRegister");
 Route::post("/postlogin","Auth\LoginController@postLogin");
 
-Route::post("/logout","Auth\LoginController@logout");
+Route::get("/logout","Auth\LoginController@logout");

@@ -31,7 +31,7 @@
 				<form class="form" action="/storeRegister" method="POST">
 					@csrf
 					<div class="form-floating mb-3">
-						<input type="number" class="form-control" id="floatingInput" name="identity" required>
+						<input type="number" class="form-control" id="floatingInput" name="identity" value="{{ old('identity') }}" required>
 						<label for="floatingInput"><i class="bi bi-person-vcard-fill"></i> NIP / NIM</label>
 					</div>
 
@@ -42,7 +42,7 @@
 					@enderror
 
 					<div class="form-floating mb-3">
-						<input type="text" class="form-control" id="floatingInput" name="name" required>
+						<input type="text" class="form-control" id="floatingInput" name="name" value="{{ old('name') }}" required>
 						<label for="floatingInput"><i class="bi bi-person"></i> Your Name </label>
 					</div>
 
@@ -53,7 +53,7 @@
 					@enderror
 
 					<div class="form-floating mb-3">
-						<input type="email" class="form-control" id="floatingInput" name="email" required>
+						<input type="email" class="form-control" id="floatingInput" value="{{ old('email') }}" name="email" required>
 						<label for="floatingInput"><i class="bi bi-mailbox2"></i> Email </label>
 					</div>
 
@@ -64,7 +64,7 @@
 					@enderror
 
 					<div class="form-floating">
-						<input type="password" class="form-control" id="floatingPassword" name="password" required>
+						<input type="password" class="form-control" id="floatingPassword" name="password" value="{{ old('password') }}" required>
 						<label for="floatingPassword"><i class="bi bi-pass-fill"></i> Password </label>
 					</div>
 

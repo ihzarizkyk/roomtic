@@ -31,8 +31,8 @@
 				<form action="/postlogin" method="POST">
 				@csrf
 					<div class="form-floating mb-3">
-						<input type="text" class="form-control" id="floatingInput" name="identity" required>
-						<label for="floatingInput"><i class="bi bi-person"></i> Email / ID Number (NIP / NIM)</label>
+						<input type="number" class="form-control" id="floatingInput" name="identity" required>
+						<label for="floatingInput"><i class="bi bi-person"></i> ID Number (NIP / NIM)</label>
 					</div>
 
 					@error('identity')

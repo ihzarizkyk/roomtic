@@ -11,6 +11,11 @@
 <body>
 
     <div class="container">
+
+    <a href="/logout" class="btn btn-md btn-danger">
+        Logout
+    </a>
+
     <div class="row">
         <div class="col-md-4">
         <!-- 1 of 2 -->

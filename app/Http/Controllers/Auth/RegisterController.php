@@ -12,6 +12,12 @@ use Illuminate\Support\Facades\Redirect;
 
 class RegisterController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware("guest");
+    }
+
     public function index()
     {
         return view("auth.register");
@@ -21,20 +27,20 @@ class RegisterController extends Controller
     {
 
         $credentials = $req->validate([
-            "name" => "required",
-            "identity" => "required|numeric",
-            "email" => "required|email",
-            "password" => "required"
+            "name" => "required|unique:users,name",
+            "identity" => "required|numeric|unique:users,identity",
+            "email" => "required|email|unique:users,email",
+            "password" => "required|unique:users,password"
         ]);
 
-        if(Auth::check($credentials))
+        if($credentials)
         {
             $user = new User;
-            $user->name = $req->name();
-            $user->identity = $req->identity();
-            $user->email = $req->email();
+            $user->name = $req->input("name");
+            $user->identity = $req->input("identity");
+            $user->email = $req->input("email");
             $user->roles = "student";
-            $user->password = Hash::make($req->password());
+            $user->password = Hash::make($req->input("password"));
             $user->save();
 
             $req->session()->regenerate();

@@ -11,6 +11,11 @@ use Illuminate\Support\Facades\Redirect;
 
 class LoginController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware("guest")->except("logout");
+    }
+
     public function index()
     {
         return view("auth.login");
@@ -20,12 +25,11 @@ class LoginController extends Controller
     {
         
         $req->validate([
-            "name" => "required|text",
             "identity" => "required|numeric",
             "password" => "required"
         ]);
 
-        if(Auth::attempt(["identity" => $req->identity,"email" => $req->email,"password" => $req->password]))
+        if(Auth::attempt(["identity" => $req->input("identity"),"password" => $req->input("password")]))
         {
             $req->session()->regenerate();
 
@@ -39,8 +43,6 @@ class LoginController extends Controller
     {
       Auth::logout();
       $req->session()->invalidate();
-
-      $req->session()->regenerateToken();
       return redirect('/login');
     }
 }
