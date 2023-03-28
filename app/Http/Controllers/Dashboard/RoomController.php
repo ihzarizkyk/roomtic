@@ -16,7 +16,8 @@ class RoomController extends Controller
      */
     public function index()
     {
-        //
+        $room = Room::all();
+        return view("dashboard.room.index",compact("room"));
     }
 
     /**
