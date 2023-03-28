@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
 use App\Models\Room;
+use App\Models\Tool;
 use Illuminate\Http\Request;
 
 class RoomController extends Controller
@@ -15,8 +16,7 @@ class RoomController extends Controller
      */
     public function index()
     {
-        //
-        return view("dashboard/room.index");
+        return view("dashboard.room.index");
     }
 
     /**
