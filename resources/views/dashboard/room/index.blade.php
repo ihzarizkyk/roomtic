@@ -65,8 +65,8 @@
     </div>
     </nav>
 
-    <div class="container bg-light mt-5">
-    <div class="container mb-4 my-5">
+    <div class="container-fluid bg-light mt-5">
+    <div class="container-fluid mb-4 my-5">
     <!-- Content here -->
         <div class="row">
         <div class="col">
