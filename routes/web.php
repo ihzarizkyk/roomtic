@@ -17,6 +17,17 @@ Route::get("/","HomeController@index")->name("home");
 Route::get("/login","Auth\LoginController@index")->name("login");
 Route::get("/register","Auth\RegisterController@index");
 
+
+// Rent Routes
+
+Route::get("/rent", "Dashboard\RentController@index")->name("rent");
+
+
+// Room Routes
+
+Route::get("/room", "Dashboard\RoomController@index")->name("room");
+
+
 // Dashboard Routes
 
 Route::get("/dashboard","Dashboard\MainController@index")->name("dashboard");

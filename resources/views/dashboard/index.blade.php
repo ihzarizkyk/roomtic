@@ -20,7 +20,12 @@
         <div class="col-md-4">
         <!-- 1 of 2 -->
             <div class="card mx-4 my-3" style="width: 18rem;">
-            
+            <div class="card-body">
+            <img src="{{ asset('img\statistic.png') }}" class="card-img-top" alt="...">
+                <p class="card-text d-flex justify-content-center">Statistic</p>
+            </div>
+            </div>
+            <div class="card mx-4 my-3" style="width: 18rem;">
             <div class="card-body">
             <img src="{{ asset('img\statistic.png') }}" class="card-img-top" alt="...">
                 <p class="card-text d-flex justify-content-center">Statistic</p>
@@ -30,6 +35,12 @@
         <div class="col-md-4">
         <div class="card mx-4 my-3" style="width: 18rem;">
             
+            <div class="card-body">
+            <img src="{{ asset('img\statistic.png') }}" class="card-img-top" alt="...">
+                <p class="card-text d-flex justify-content-center">Statistic</p>
+            </div>
+            </div>
+            <div class="card mx-4 my-3" style="width: 18rem;">
             <div class="card-body">
             <img src="{{ asset('img\statistic.png') }}" class="card-img-top" alt="...">
                 <p class="card-text d-flex justify-content-center">Statistic</p>

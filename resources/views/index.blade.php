@@ -35,11 +35,14 @@
           </a>
         </li>
         <li class="nav-item">
+        <a class="nav-link" href="/room">Room</a>
           @auth
           <a class="nav-link" href="/dashboard">Dashboard</a>
+          
           @endauth
 
           @guest
+          
           <a class="nav-link" href="/login">Login</a>
           @endguest
         </li>
