@@ -16,7 +16,8 @@ class RoomController extends Controller
      */
     public function index()
     {
-        return view("dashboard.room.index");
+        $title = "Dashboard RoomTic";
+        return view("dashboard.room.index",compact("title"));
     }
 
     /**
@@ -46,9 +47,10 @@ class RoomController extends Controller
      * @param  \App\Models\Room  $room
      * @return \Illuminate\Http\Response
      */
-    public function show(Room $room)
+    public function show()
     {
-        //
+        $title = "Dashboard RoomTic";
+        return view("dashboard.room.rent",compact("title"));
     }
 
     /**

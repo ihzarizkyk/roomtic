@@ -18,14 +18,10 @@ Route::get("/login","Auth\LoginController@index")->name("login");
 Route::get("/register","Auth\RegisterController@index");
 
 
-// Rent Routes
-
-Route::get("/rent", "Dashboard\RentController@index")->name("rent");
-
-
 // Room Routes
 
 Route::get("/room", "Dashboard\RoomController@index")->name("room");
+Route::get("/room/rent", "Dashboard\RoomController@detail");
 
 
 // Dashboard Routes

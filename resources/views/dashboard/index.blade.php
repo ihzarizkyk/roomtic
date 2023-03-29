@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <title>Dashboard - RoomTic</title>
+    <title>{{ $title }}</title>
 </head>
 <body>
 
@@ -36,7 +36,7 @@
             </li>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Assets</a>
+                <a class="nav-link" href="#">Tools</a>
             </li>
             </li>
             <li class="nav-item">

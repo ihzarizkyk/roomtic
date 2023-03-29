@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-    <title>Room</title>
+    <title>Room - {{ $title }}</title>
     
 </head>
 <body>
@@ -40,7 +40,7 @@
             </li>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Log Out</a>
+                <a class="nav-link" href="/logout">Log Out</a>
             </li>
             <!-- <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -69,20 +69,16 @@
     <div class="container-fluid mb-4 my-5">
     <!-- Content here -->
         <div class="row">
-        <div class="col">
+        <div class="col-4">
         <!-- 1 of 3 -->
         </div>
-        <div class="col my-3">
-        Ruangan
+        <div class="my-3">
+
         <form class="d-flex my-2">
             <input class="form-control mx-1" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
         <!-- 2 of 3 -->
-        </div>
-        <div class="col">
-        <!-- 3 of 3 -->
-        </div>
     </div>
     
     </div>
@@ -126,156 +122,6 @@
         </div>
     </div>
     
-
-    <br>
-    <div class="row">
-        <div class="col">
-        <div class="container">
-            <div class="row">
-                <div class="col align-self-start">
-                <!-- One of three columns -->
-                </div>
-                <div class="col align-self-center">
-                <!-- One of three columns -->
-                </div>
-                <div class="col align-self-end">
-                <!-- One of three columns -->
-                <div class="form-check">
-                <input class="form-check-input" style="width: 50px; height: 50px" type="checkbox" value="" id="flexCheckDefault">
-
-                <label class="form-check-label" for="flexCheckDefault">
-                    <!-- Default checkbox -->
-                </label>
-            </div>
-                </div>
-            </div>
-            </div>
-        <!-- 1 of 3 -->
-        </div>
-        <div class="col">
-            <div class="alert alert-secondary" role="alert">
-            KTT 1.10
-            </div>
-        <!-- 2 of 3 -->
-        </div>
-        <div class="col">
-        <!-- 3 of 3 -->
-        <a class="btn btn-success btn-lg" href="/rent">Rent</a>
-        </div>
-    </div>
-    <br>
-    <div class="row">
-        <div class="col">
-        <div class="container">
-            <div class="row">
-                <div class="col align-self-start">
-                <!-- One of three columns -->
-                </div>
-                <div class="col align-self-center">
-                <!-- One of three columns -->
-                </div>
-                <div class="col align-self-end">
-                <!-- One of three columns -->
-                <div class="form-check">
-                <input class="form-check-input" style="width: 50px; height: 50px" type="checkbox" value="" id="flexCheckDefault">
-
-                <label class="form-check-label" for="flexCheckDefault">
-                    <!-- Default checkbox -->
-                </label>
-            </div>
-                </div>
-            </div>
-            </div>
-
-            
-        <!-- 1 of 3 -->
-        </div>
-        <div class="col">
-            <div class="alert alert-secondary" role="alert">
-            KTT 1.11
-            </div>
-        <!-- 2 of 3 -->
-        </div>
-        <div class="col">
-        <!-- 3 of 3 -->
-        <a class="btn btn-success btn-lg" href="/rent">Rent</a>
-        </div>
-    </div>
-
-    <br>
-    <div class="row">
-        <div class="col">
-        <div class="container">
-            <div class="row">
-                <div class="col align-self-start">
-                <!-- One of three columns -->
-                </div>
-                <div class="col align-self-center">
-                <!-- One of three columns -->
-                </div>
-                <div class="col align-self-end">
-                <!-- One of three columns -->
-                <div class="form-check">
-                <input class="form-check-input" style="width: 50px; height: 50px" type="checkbox" value="" id="flexCheckDefault">
-
-                <label class="form-check-label" for="flexCheckDefault">
-                    <!-- Default checkbox -->
-                </label>
-            </div>
-                </div>
-            </div>
-            </div>
-        <!-- 1 of 3 -->
-        </div>
-        <div class="col">
-            <div class="alert alert-secondary" role="alert">
-            KTT 1.12
-            </div>
-        <!-- 2 of 3 -->
-        </div>
-        <div class="col">
-        <!-- 3 of 3 -->
-        <a class="btn btn-success btn-lg" href="/rent">Rent</a>
-        </div>
-    </div>
-
-    <br>
-    <div class="row">
-        <div class="col">
-        <div class="container">
-            <div class="row">
-                <div class="col align-self-start">
-                <!-- One of three columns -->
-                </div>
-                <div class="col align-self-center">
-                <!-- One of three columns -->
-                </div>
-                <div class="col align-self-end">
-                <!-- One of three columns -->
-                <div class="form-check">
-                <input class="form-check-input" style="width: 50px; height: 50px" type="checkbox" value="" id="flexCheckDefault">
-
-                <label class="form-check-label" for="flexCheckDefault">
-                    <!-- Default checkbox -->
-                </label>
-            </div>
-                </div>
-            </div>
-            </div>
-        <!-- 1 of 3 -->
-        </div>
-        <div class="col">
-            <div class="alert alert-secondary" role="alert">
-            KTT 1.13
-            </div>
-        <!-- 2 of 3 -->
-        </div>
-        <div class="col">
-        <!-- 3 of 3 -->
-        <a class="btn btn-success btn-lg" href="/rent">Rent</a>
-        </div>
-    </div>
-    <br>
     </div>
     
     

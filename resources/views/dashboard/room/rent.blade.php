@@ -16,7 +16,7 @@
 				margin:80px !important;
 			}
 		</style>
-    <title>Rent</title>
+    <title>Rent - {{ $title }}</title>
 </head>
 <body>
     <!-- <h1>rennt</h1> -->

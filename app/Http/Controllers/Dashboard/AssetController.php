@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Tool;
 use Illuminate\Http\Request;
 
-class ToolsController extends Controller
+class AssetController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,8 @@ class ToolsController extends Controller
      */
     public function index()
     {
-        //
+        $title = "Dashboard RoomTic";
+        return view("dashboard.asset.index",compact("title"));
     }
 
     /**
