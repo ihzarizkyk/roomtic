@@ -15,10 +15,12 @@ class CreateAssetTable extends Migration
     {
         Schema::create('asset', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger("user_id")->nullable();
             $table->Integer("code")->nullable();
             $table->string("name")->nullable();
             $table->Integer("amount")->nullable();
             $table->enum("status",["available","empty"])->nullable();
+            $table->enum("approval",[0,1,2])->default(0);
             $table->timestamps();
         });
     }

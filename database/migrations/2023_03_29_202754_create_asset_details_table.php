@@ -16,10 +16,8 @@ class CreateAssetDetailsTable extends Migration
         Schema::create('asset_details', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger("asset_id")->nullable();
-            $table->unsignedBigInteger("user_id")->nullable();
             $table->text("img")->nullable();
             $table->text("desc")->nullable();
-            $table->enum("approval",["pending","proccess","approve"]);
             $table->dateTime("startBook")->nullable();
             $table->dateTime("endBook")->nullable();
             $table->timestamps();

@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'ad45d581bac555f054c5903286bcd9428ad61873',
+    'reference' => '086d583b7664cd80b0603221c25a901c85333d20',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -460,7 +460,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'ad45d581bac555f054c5903286bcd9428ad61873',
+      'reference' => '086d583b7664cd80b0603221c25a901c85333d20',
     ),
     'laravel/sail' => 
     array (
@@ -696,12 +696,12 @@ private static $installed = array (
     ),
     'phpunit/phpunit' => 
     array (
-      'pretty_version' => '9.6.5',
-      'version' => '9.6.5.0',
+      'pretty_version' => '9.6.6',
+      'version' => '9.6.6.0',
       'aliases' => 
       array (
       ),
-      'reference' => '86e761949019ae83f49240b2f2123fb5ab3b2fc5',
+      'reference' => 'b65d59a059d3004a040c16a82e07bbdf6cfdd115',
     ),
     'psr/container' => 
     array (
@@ -818,12 +818,12 @@ private static $installed = array (
     ),
     'psy/psysh' => 
     array (
-      'pretty_version' => 'v0.11.13',
-      'version' => '0.11.13.0',
+      'pretty_version' => 'v0.11.14',
+      'version' => '0.11.14.0',
       'aliases' => 
       array (
       ),
-      'reference' => '722317c9f5627e588788e340f29b923e58f92f54',
+      'reference' => '8c2e264def7a8263a68ef6f0b55ce90b77d41e17',
     ),
     'ralouphie/getallheaders' => 
     array (
@@ -851,6 +851,15 @@ private static $installed = array (
       array (
       ),
       'reference' => 'fc9bb7fb5388691fd7373cd44dcb4d63bbcf24df',
+    ),
+    'realrashid/sweet-alert' => 
+    array (
+      'pretty_version' => 'v6.0.0',
+      'version' => '6.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'efe53185ddd48ef1cc22399bfdae55e83fe36bf2',
     ),
     'rhumsaa/uuid' => 
     array (

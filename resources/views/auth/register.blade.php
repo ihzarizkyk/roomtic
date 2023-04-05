@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
 	<title>Register - RoomTic</title>
 </head>
 <style>
@@ -111,6 +112,7 @@
 </div>
 
 <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+@include("sweetalert::alert")
 <script>
 	function Toggle(){
 		var temp = document.getElementById('floatingPassword');

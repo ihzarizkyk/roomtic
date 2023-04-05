@@ -3,11 +3,18 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
-use App\Models\Tool;
+use App\Models\Asset;
+use App\Models\AssetDetails;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 class AssetController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware("auth");
+    }
     /**
      * Display a listing of the resource.
      *
@@ -15,8 +22,8 @@ class AssetController extends Controller
      */
     public function index()
     {
-        $title = "Dashboard RoomTic";
-        return view("dashboard.asset.index",compact("title"));
+        $titles = "Assets";
+        return view("dashboard.asset.index",compact("titles"));
     }
 
     /**
@@ -26,7 +33,8 @@ class AssetController extends Controller
      */
     public function create()
     {
-        //
+        $titles = "Create Asset";
+        return view("dashboard.asset.create",compact('titles'));
     }
 
     /**
@@ -46,9 +54,10 @@ class AssetController extends Controller
      * @param  \App\Models\Tool  $tool
      * @return \Illuminate\Http\Response
      */
-    public function show(Tool $tool)
+    public function show($id)
     {
-        //
+        $asset = Asset::find($id);
+        return view("dashboard.asset.detail",compact("asset"));
     }
 
     /**
@@ -57,9 +66,10 @@ class AssetController extends Controller
      * @param  \App\Models\Tool  $tool
      * @return \Illuminate\Http\Response
      */
-    public function edit(Tool $tool)
+    public function edit($id)
     {
-        //
+        $asset = Asset::find($id);
+        return view("dashboard.asset.create",compact("asset"));
     }
 
     /**
@@ -69,7 +79,7 @@ class AssetController extends Controller
      * @param  \App\Models\Tool  $tool
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Tool $tool)
+    public function update(Request $req)
     {
         //
     }
@@ -80,8 +90,11 @@ class AssetController extends Controller
      * @param  \App\Models\Tool  $tool
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Tool $tool)
+    public function destroy($id)
     {
-        //
+        $asset = Asset::find($id);
+        $asset->delete();
+
+        return back();
     }
 }

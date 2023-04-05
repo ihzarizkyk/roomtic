@@ -1,132 +1,119 @@
+@extends('dashboard.layouts.menu')
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-    <title>Room - {{ $title }}</title>
-    
+    <link rel="stylesheet" href="{{ asset('css/datatables.min.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <title>{{ $title }} - Dasboard RoomTic</title>
 </head>
 <body>
-    <br>
-        <nav class="navbar navbar-light bg-light fixed-top">
-    <div class="container-fluid">
-        <button class="navbar-toggler me-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand me-auto" href="#">Room</a>
+@section('sidebar')
 
-        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Roomtic</h5>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-                <a class="nav-link " href="/dashboard">Dashboard</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">User</a>
-            </li>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link fw-bold" aria-current="page" href="#">Room</a>
-            </li>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Assets</a>
-            </li>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/logout">Log Out</a>
-            </li>
-            <!-- <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li>
-                    <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-            </li> -->
-            </ul>
-            <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-        </div>
-        </div>
+@section('content')
+    <div class="container-fluid my-5">
+        
+        @if(auth()->user()->roles == "admin" && "logistic")
+            <a href="{{ route('room.create') }}" class="btn btn-md btn-primary my-5">
+                Create New Room
+            </a>
+        @endif
+
+        <br>
+        <br>
+
+        <table class="table table-hover my-5 mt-4" id="room">
+            <thead>
+            <tr>
+                    <th>No</th>
+                    <th>Room</th>
+                    <th>Capacity</th>
+                    <th>Status</th>
+                    <th>Code</th>
+                    @if(auth()->user()->roles == "admin" && "logistic")
+                    <th>Action</th>
+                    @endif
+                    <th>Detail</th>
+
+            </tr>
+            </thead>
+            <tbody>
+
+            <tr>
+                    <td>1</td>
+                    <td>KTT 1.23</td>
+                    <td>40</td>
+                    <td>
+                        <span class="badge bg-secondary">
+                            Request Approval
+                        </span>
+                    </td>
+                    <td>1166171611</td>
+                    @if(auth()->user()->roles == "admin" && "logisitic")
+                    <td>
+                        lorem
+                    </td>
+                    @endif
+                    <td>
+                        <a href="/dashboard/room/detail" class="btn btn-md btn-primary">Detail</a>
+                    </td>
+            </tr>
+
+            <tr>
+                    <td>2</td>
+                    <td>KTT 1.04</td>
+                    <td>40</td>
+                    <td>
+                        <span class="badge bg-danger">
+                            Full
+                        </span>
+                    </td>
+                    <td>1166171611</td>
+                    @if(auth()->user()->roles == "admin" && "logisitic")
+                    <td>
+                        lorem
+                    </td>
+                    @endif
+                    <td>
+                        <a href="#" class="btn btn-md btn-primary">Detail</a>
+                    </td>
+            </tr>
+
+            <tr>
+                    <td>3</td>
+                    <td>KTT 1.05</td>
+                    <td>40</td>
+                    <td>
+                        <span class="badge bg-success">
+                            Available
+                        </span>
+                    </td>
+                    <td>1166171611</td>
+                    @if(auth()->user()->roles == "admin" && "logisitic")
+                    <td>
+                        lorem
+                    </td>
+                    @endif
+                    <td>
+                        <a href="#" class="btn btn-md btn-primary">Detail</a>
+                    </td>
+            </tr>
+        
+            </tbody>
+        </table>        
     </div>
-    </nav>
-
-    <div class="container-fluid bg-light mt-5">
-    <div class="container-fluid mb-4 my-5">
-    <!-- Content here -->
-        <div class="row">
-        <div class="col-4">
-        <!-- 1 of 3 -->
-        </div>
-        <div class="my-3">
-
-        <form class="d-flex my-2">
-            <input class="form-control mx-1" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-        <!-- 2 of 3 -->
-    </div>
-    
-    </div>
-    <div class="row">
-    
-    <!-- This is a bordered element with a primary color. -->
-        <div class="col" >
-            <div class="container">
-            <div class="row">
-                <div class="col align-self-start">
-                <!-- One of three columns -->
-                </div>
-                <div class="col align-self-center">
-                <!-- One of three columns -->
-                </div>
-                <div class="col align-self-end">
-                <!-- One of three columns -->
-                <div class="form-check">
-                <input class="form-check-input" style="width: 50px; height: 50px" type="checkbox" value="" id="flexCheckDefault">
-
-                <label class="form-check-label" for="flexCheckDefault">
-                    <!-- Checked checkbox -->
-                </label>
-            </div>
-                </div>
-            </div>
-            </div>
-        <!-- <p>test<span class="border"></span></p> -->
-            
-        <!-- 1 of 3 -->
-        </div>
-        <div class="col">
-            <div class="alert alert-secondary" role="alert">
-            KTT 1.09
-            </div>
-        <!-- 2 of 3 -->
-        </div>
-        <div class="col">
-        <!-- 3 of 3 -->
-        <a class="btn btn-success btn-lg" href="/rent">Rent</a>
-        </div>
-    </div>
-    
-    </div>
-    
-    
+@endsection
 
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('js/datatables.min.js') }}"></script>
+<script>
+    $(document).ready( function () {
+        $('#room').DataTable();
+    } );
+</script>
 </body>
 </html>

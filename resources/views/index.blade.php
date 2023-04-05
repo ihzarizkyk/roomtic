@@ -56,7 +56,7 @@
     <div class="p-5 mb-4 bg-light rounded-3" id="about">
       <div class="container-fluid py-5">
         <h1 class="display-5 fw-bold">RoomTic</h1>
-        <p class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>
+        <p class="col-md-8 fs-4"><b>RoomTic</b> is a web-based application that can help you easily manage classrooms in educational institutions and other tools.</p>
         <a class="btn btn-success btn-lg" href="#featured-3">Get Started</a>
         <a class="btn btn-primary btn-lg" href="https://docs.google.com/forms/d/1YcTRVuud1ukDaQIv6S77MfuZJ7_9GcNnqsa-60UBxyw/edit?usp=sf_link" target="_blank">Try Prototype!</a>
       </div>
@@ -72,21 +72,21 @@
           <i class="bi bi-door-open-fill mx-2 my-2"></i>
         </div>
         <h3 class="fs-2">Booking Room</h3>
-        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+        <p>You Can Booking Room and see the detail information easely</p>
       </div>
       <div class="feature col">
         <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
           <i class="bi bi-tools mx-2 my-2"></i>
         </div>
         <h3 class="fs-2">Booking Tools</h3>
-        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+        <p>You Can Tools and see the detail information easely</p>
       </div>
       <div class="feature col">
         <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
           <i class="bi bi-check-circle-fill mx-2 my-2"></i>
         </div>
         <h3 class="fs-2">Request Approval</h3>
-        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+        <p>You Can Request Approval for rent room and tools asset and see the detail information easely</p>
       </div>
     </div>
   </div>

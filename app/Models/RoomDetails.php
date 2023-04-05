@@ -9,5 +9,13 @@ class RoomDetails extends Model
 {
     use HasFactory;
 
+    protected $primaryKey = "id";
+
     protected $table = "room_details";
+
+    public function Room()
+    {
+        return $this->belongsTo(Room::class,"id");
+    }
+
 }

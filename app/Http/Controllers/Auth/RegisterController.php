@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
+use Alert;
 
 class RegisterController extends Controller
 {
@@ -44,6 +45,8 @@ class RegisterController extends Controller
             $user->save();
 
             $req->session()->regenerate();
+
+            alert()->success('Success','You are successfully registered account!');
 
             return redirect("/dashboard");
 
